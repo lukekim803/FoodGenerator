@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Recipe Generator </title>
+        <link rel= "stylesheet" href="style.css">
+        
+    </head>
+    
+      
+  
+    <body>
+        <img src="p04tx3m6.jpg">
+        <div id="container">
+        <div id="search">
+            <Main_text for="Message1">ARE YOU FINDING SOMETHING TO MAKE?</Main_text>
+            <input type="text" id="Message1" name="Message1" required placeholder="PRESS THE BUTTON">
+            
+            
+            <form class="example" action="action_page.php">
+        
+            <button type="button" onclick="displayAgent()">PRESS</button>
+            </form>
+       
+</Main>
+</div>
+<div id = "information">
+  <p> List Food: <span id="title1"></span></p>
+</div>
+
+
+<script>
+    const apiKey = 'ca06a81450mshcaa6e9aaf1adb4ep1b4adcjsnc8957fcab2d3';
+
+    function displayAgent() 
+    {
+      const Message1 = document.getElementById('Message1').title;
+     
+
+      const url = `https://spoonacular-recipe-food-nutrition-v1.p.rapidapi.com/recipes/random?tags=${Message1}`;
+
+      const newUrl = `${url}`
+      fetch(newUrl, {
+        method: 'GET',
+        headers: {
+          'X-RapidAPI-Key': apiKey,
+          'Content-Type': 'application/json'
+        }
+        
+
+        
+      })
+
+      
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        document.getElementById('title1').innerText = data['recipes'][0]['title'];
+      })
+    }
+
+</script>
+    
+
+    
+
+
+  
+</body>
+</html>
