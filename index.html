@@ -10,28 +10,29 @@
     </head>
     
       
+  </img>
+      
   
     <body>
-        <h1>
-          FOOD GENERATOR "TYPE ANYTHING IN THE BOX"
-        </h1>
         
         <div id="container">
         <div id="search">
-            <Main_text for="Message1">ARE YOU FINDING SOMETHING TO MAKE?</Main_text>
-            <input type="text" id="Message1" name="Message1" required placeholder="PRESS THE BUTTON">
-            
+            <Main_text for="Message1" style="color: #1a0c99; font-size: 35px;">ARE YOU FINDING SOMETHING TO MAKE?</Main_text>
+            <input type="text" id="Message1" name="Message1" required placeholder="TYPE AN INGREDIENT">
+             
             
             <form class="example" action="action_page.php">
         
-            <button type="button" onclick="displayAgent()">PRESS</button>
+              <button type="button" onclick="displayAgent()">PRESS</button>
             </form>
        
 </Main>
 </div>
 <div id = "information">
-  <p> List Food: <span id="title1"></span></p>
+  <p style ="font-family: 'Courier New', Courier, monospace; color:hsl(240, 66%, 49%) ;" > List Food: <span id="title1"></span></p>
 </div>
+
+
 <script>
     const apiKey = 'ca06a81450mshcaa6e9aaf1adb4ep1b4adcjsnc8957fcab2d3';
 
@@ -63,5 +64,11 @@
     }
 
 </script>
+    
+
+    
+
+  <img class id = "image-food" src= "foodrecipes.jpg" alt ="food recipe">
+  
 </body>
 </html>
